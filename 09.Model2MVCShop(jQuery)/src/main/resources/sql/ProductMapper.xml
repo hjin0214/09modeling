@@ -54,11 +54,14 @@
 											<if test="searchCondition != null">
 												<where>
 												
-													<if test="searchCondition == 1 and searchKeyword !='' ">
-										 				PROD_NAME = #{searchKeyword}
+													<if test="searchCondition == 0 and searchKeyword !='' ">
+										 				prod_no like '%${searchKeyword}%'
 													</if>
 													<if test="searchCondition == 1 and searchKeyword !='' ">
-										 				PRICE = #{searchKeyword}
+										 				prod_name like '%${searchKeyword}%'
+													</if>
+													<if test="searchCondition == 2 and searchKeyword !='' ">
+										 				price like '%${searchKeyword}%'
 													</if>
 												</where>
 											</if>

@@ -1,7 +1,7 @@
 <%@page import="org.springframework.ui.Model"%>
 <%@page import="com.model2.mvc.service.domain.Product"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=EUC-KR" 
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 

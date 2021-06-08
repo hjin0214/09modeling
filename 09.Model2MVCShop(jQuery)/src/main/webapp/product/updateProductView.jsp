@@ -12,16 +12,21 @@
 
 <script type="text/javascript" src="../javascript/calendar.js">
 </script>
-
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
 
-<!--
+
 function fncUpdateProduct(){
 	//Form 유효성 검증
- 	var name = document.detailForm.prodName.value;
+ 	/* var name = document.detailForm.prodName.value;
 	var detail = document.detailForm.prodDetail.value;
 	var manuDate = document.detailForm.manuDate.value;
-	var price = document.detailForm.price.value;
+	var price = document.detailForm.price.value; */
+	
+	var name=$("input[name='prodName']").val();
+	var detail=$("input[name='prodDetail']").val();
+	var manuDate=$("input[name='manuDate']").val();
+	var price=$("input[name='price']").val();
 
 	if(name == null || name.length<1){
 		alert("상품명은 반드시 입력하여야 합니다.");
@@ -40,10 +45,11 @@ function fncUpdateProduct(){
 		return;
 	}
 		
-	document.detailForm.action='/product/updateProduct';
-	document.detailForm.submit();
+/* 	document.detailForm.action='/product/updateProduct';
+	document.detailForm.submit(); */
+	$("form").attr("method" , "POST").attr("action" , "/user/updateUser").submit();
 }
--->
+
 
 </script>
 </head>
